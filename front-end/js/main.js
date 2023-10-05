@@ -3,16 +3,18 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-        discs:[],
+      //# ARRAY VUOTO IN CUI VERRA' PUSHATO L'ARRAY DALL'API
+      discs: [],
     };
   },
 
+  //# FACCIO LA CHIAMATA AXIOS ALLA NOSTRA API
   mounted() {
     axios
-      .get(...)
+      .get("http://localhost/php-dischi-json/back-end/data/dischi.php")
       .then((response) => {
-        console.log(response.data),
-        this.discs=response.data
+        console.log(response.data);
+        this.discs = response.data;
       });
   },
 }).mount("#app");

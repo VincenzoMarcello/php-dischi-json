@@ -1,7 +1,7 @@
 <?php
 
 //# IMPORTO IL FILE JSON QUI
-$json_discs = file_get_contents("./dischi_jason.jason");
+$json_discs = file_get_contents("./dischi_json.json");
 
 //# FACCIO IL DECODE E TRASFORMO IL FILE JSON IN UN ARRAY
 $discs = json_decode($json_discs);

@@ -10,11 +10,9 @@ createApp({
 
   //# FACCIO LA CHIAMATA AXIOS ALLA NOSTRA API
   mounted() {
-    axios
-      .get("http://localhost/php-dischi-json/back-end/data/dischi.php")
-      .then((response) => {
-        console.log(response.data);
-        this.discs = response.data;
-      });
+    axios.get("../back-end/data/dischi.php").then((response) => {
+      console.log(response.data);
+      this.discs = response.data;
+    });
   },
 }).mount("#app");
